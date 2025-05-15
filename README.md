@@ -11,8 +11,6 @@ MockMate is a cutting-edge web application built with **Next.js** for both front
 - Tailwind CSS
 - Vapi AI Voice Agents
 - shadcn/ui
-- Google Gemini
-- Zod (for schema validation)
 
 ---
 
@@ -133,4 +131,3 @@ To deepen your knowledge about the core technologies used in MockMate, check out
 - [Firebase Documentation](https://firebase.google.com/docs)
 - [Tailwind CSS](https://tailwindcss.com/docs)
 - [Vapi AI](https://vapi.com)
-- [Google Gemini](https://developers.google.com/)
