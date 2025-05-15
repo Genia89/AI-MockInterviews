@@ -11,6 +11,15 @@ MockMate is a cutting-edge web application built with **Next.js** for both front
 - Tailwind CSS
 - Vapi AI Voice Agents
 - shadcn/ui
+- Google Gemini
+- Zod (for schema validation)
+
+---
+
+## 📝 Languages Used
+
+- **TypeScript** — for building scalable, typed React and backend code with better tooling and fewer bugs.
+- **JavaScript** — the core language for web development and the basis for TypeScript.
 
 ---
 
@@ -36,7 +45,7 @@ Ensure the following are installed:
 
 - Git
 - Node.js
-- npm (Node Package Manager)
+- npm (Node Package Manager) — used to install and manage packages and dependencies in JavaScript and TypeScript projects.
 
 ### Clone the Repository
 
@@ -105,13 +114,12 @@ NEXT_PUBLIC_FIREBASE_APP_ID
 - To generate the service account credentials for backend features, go to Project Settings > Service Accounts and generate a new private key.
 
 - Use the values from this file to fill in:
-```angular2html
+```
 FIREBASE_PROJECT_ID
 
 FIREBASE_CLIENT_EMAIL
 
 FIREBASE_PRIVATE_KEY (ensure you format multiline private key properly in the .env.local)
-
 ```
 #### Follow these steps carefully to ensure your app can authenticate users and communicate with Vapi AI services successfully.
 
@@ -131,3 +139,4 @@ To deepen your knowledge about the core technologies used in MockMate, check out
 - [Firebase Documentation](https://firebase.google.com/docs)
 - [Tailwind CSS](https://tailwindcss.com/docs)
 - [Vapi AI](https://vapi.com)
+- [Google Gemini](https://developers.google.com/)
