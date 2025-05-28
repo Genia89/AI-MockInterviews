@@ -1,14 +1,16 @@
 import dayjs from 'dayjs'
-import {create} from "node:domain";
 import Image from "next/image";
 import {getRandomInterviewCover} from "@/lib/utils";
 import {Button} from "@/components/ui/button";
 import Link from "next/link";
 import DisplayTechIcons from "@/components/DisplayTechIcons";
+import {getFeedbackByInterviewId} from "@/lib/actions/general.action";
 
-const InterviewCard = ({ id, userId, role, type, techstack,
+const InterviewCard = async ({ id, userId, role, type, techstack,
                            createdAt} : InterviewCardProps) => {
-    const feedback = null as Feedback | null;
+    const feedback = userId && id
+    ? await getFeedbackByInterviewId({ interviewId: id, userId })
+        : null;
 
     // a mix of technical and behavioural
     const normalizedType = /mix/gi.test(type) ? 'Mixed' : type;
@@ -52,8 +54,8 @@ const InterviewCard = ({ id, userId, role, type, techstack,
 
                     <Button className="btn-primary">
                         <Link href={feedback
-                            ? `/interview/${id}/feedback`
-                            : `/interview/${id}`
+                            ? `/app/(root)/interview/${id}/feedback`
+                            : `/app/(root)/interview/${id}`
                         }>
                             {feedback ? 'Check Feedback' : 'View Interview'}
                         </Link>
